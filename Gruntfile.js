@@ -7,11 +7,13 @@ module.exports = function(grunt) {
 		meta: {
 			banner:
 				'/*!\n' +
-				' * reveal.js <%= pkg.version %> (<%= grunt.template.today("yyyy-mm-dd, HH:MM") %>)\n' +
+				' * Punk in five lessons ' +
+				' * presentation by Andy Lim ' +
+				' * using reveal.js <%= pkg.version %> (<%= grunt.template.today("yyyy-mm-dd, HH:MM") %>)\n' +
 				' * http://lab.hakim.se/reveal-js\n' +
 				' * MIT licensed\n' +
 				' *\n' +
-				' * Copyright (C) 2013 Hakim El Hattab, http://hakim.se\n' +
+				' * reveal.js copyright (C) 2013 Hakim El Hattab, http://hakim.se\n' +
 				' */'
 		},
 
