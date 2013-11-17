@@ -42,5 +42,8 @@
       "type": "MIT",
       "url": "https://github.com/hakimel/reveal.js/blob/master/LICENSE"
     }
-  ]
+  ],
+  "scripts": {
+    "postinstall": "./node_modules/grunt/bin/grunt serve"
+  }
 }
