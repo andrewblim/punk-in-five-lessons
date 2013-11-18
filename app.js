@@ -5,6 +5,7 @@ app.use(express.logger());
 app.use('/css', express.static(__dirname + '/css'));
 app.use('/js', express.static(__dirname + '/js'));
 app.use('/lib', express.static(__dirname + '/lib'));
+app.use('/plugin', express.static(__dirname + '/plugin'));
 app.use(express.static(__dirname + '/public'));
 
 var port = process.env.PORT || 5000;

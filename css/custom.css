@@ -7,3 +7,11 @@ p.text {
 
 p.small.text { font-size: 60%; }
 p.big.text { font-size: 110%; }
+
+input[type="radio"] { vertical-align: middle; }
+
+label.mediatype { 
+  margin-left: 0.5em;
+  margin-right: 1em;
+  font-size: 80%;
+}

@@ -14,16 +14,19 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="/css/reveal.min.css">
-		<link rel="stylesheet" href="/css/theme/solarized.css" id="theme">
-		<link rel="stylesheet" href="/css/custom.css">
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+		<script src="/js/media.js"></script>
+
+		<link rel="stylesheet" href="/css/reveal.min.css" />
+		<link rel="stylesheet" href="/css/theme/solarized.css" id="theme" />
+		<link rel="stylesheet" href="/css/custom.css" />
 
 		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="/lib/css/zenburn.css">
+		<link rel="stylesheet" href="/lib/css/zenburn.css" />
 
 		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
 		<script>
-			document.write( '<link rel="stylesheet" href="/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+			document.write( '<link rel="stylesheet" href="/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print" />' );
 		</script>
 
 		<!--[if lt IE 9]>
@@ -39,26 +42,43 @@
 				<section>
 					<h1>Punk rock in five lessons</h1>
 					<p class="small text">
-						A short guide for the uninitiated
+						A short guide for the uninitiated<br/>
+						by <a href="http://andywrote.me/">Andy Lim</a> / <a href="http://twitter.com/andy_wrote">@andy_wrote</a>
+					</p>
+					<p class="text">
+						Press <strong>left/right</strong> to scroll between the lessons<br/>
+						Press <strong>up/down</strong> to navigate within each lesson
+					</p>
+				</section>
+
+				<section>
+					<h2>Media options</h2>
+					<p class="text">
+						<form style="width: 20%; margin-left: auto; margin-right: auto;">
+						  <div style="text-align: left;">
+						    <input type="radio" id="spotify" name="mediatype" checked="checked" />
+						    <label class="mediatype" for="spotify">Spotify</label>
+						  </div>
+						  <div style="text-align: left;">
+						    <input type="radio" id="youtube" name="mediatype" />
+						    <label class="mediatype" for="youtube">YouTube</label>
+						  </div>
+						</form>
 					</p>
 					<p class="small text">
-						<a href="http://andywrote.me/">Andy Lim</a> / <a href="http://twitter.com/andy_wrote">@andy_wrote</a>
-					</p>
-					<p>
-						Press left/right to scroll between the lessons<br/>
-						Press up/down to navigate within each lessons
+						If your computer has Spotify, it is preferred - with YouTube we'll be using whatever I found posted by others, which is subject to change and/or removal. Plus the page transitions look a little better with Spotify. 
 					</p>
 				</section>
 
 				<section>
 					<section>
 						<h2>1. What is punk?</h2>
+						<p id="test">
+						</p>
 					</section>
 					<section>
 						<h3>The sound</h3>
-						<p>
-							<iframe src="https://embed.spotify.com/?uri=spotify:track:6ui6l3ZNvlrGQZArwo8195" width="250" height="330" frameborder="0" allowtransparency="true"></iframe>
-						</p>
+						<div class='song' id='god-save-the-queen'></div>
 						<p class="text">
 							The basic punk sound is vocals, electric guitar, electric bass, and drums playing a song with a simple chord structure, generous distortion, and an uptempo beat. 
 						</p>
@@ -69,18 +89,14 @@
 					</section>
 					<section>
 						<h3>The attitude</h3>
-						<p>
-							<iframe src="https://embed.spotify.com/?uri=spotify:track:678Fh7cIfN1sLqxsj5sc2G" width="250" height="330" frameborder="0" allowtransparency="true"></iframe>
-						</p>
+						<div class='song' id='sonic-reducer'></div>
 						<p class="text">
 							Aggressive, emotional, ferocious, youthful. 
 						</p>
 					</section>
 					<section>
 						<h3>The ethos</h3>
-						<p>
-							<iframe src="https://embed.spotify.com/?uri=spotify:track:1nEchyBF1nPPfIAq4YGRyc" width="250" height="330" frameborder="0" allowtransparency="true"></iframe>
-						</p>
+						<div class='song' id='give-me-the-cure'></div>
 						<p class="text">
 							Do-it-yourself (DIY). Write your own songs, record in your own basement, release your own albums, organize your own concerts. Don't lose control of your artistic product. 
 						</p>
@@ -90,9 +106,7 @@
 					</section>
 					<section>
 						<h3>The politics</h3>
-						<p>
-							<iframe src="https://embed.spotify.com/?uri=spotify:track:4aKMvmxQgX7J766G4pFlyh" width="250" height="330" frameborder="0" allowtransparency="true"></iframe>
-						</p>
+						<div class='song' id='career-opportunities'></div>
 						<p class="text">
 							Generally left-wing. Identification with the poor and working class. Distrust of the government and of the wealthy. Some revolutionary rhetoric. 
 						</p>
@@ -122,20 +136,20 @@
 					</section>
 					<section>
 						<h3>Let's Dance</h3>
-						<p>
-							<iframe src="https://embed.spotify.com/?uri=spotify:track:2Qm5DrmotzWvqNM3JlcQYo" width="250" height="330" frameborder="0" allowtransparency="true"></iframe>
-							<iframe src="https://embed.spotify.com/?uri=spotify:track:2hanzn1vHVREYNFzHYhOwX" width="250" height="330" frameborder="0" allowtransparency="true"></iframe>
-						</p>
+						<div class='songblock'>
+							<span class='song' id='lets-dance-chris-montez'></span>
+							<span class='song' id='lets-dance-ramones'></span>
+						</div>
 						<p class="small text">
 							Chris Montez (1962) covered by the Ramones (1976)
 						</p>
 					</section>
 					<section>
 						<h3>Soul Kitchen</h3>
-						<p>
-							<iframe src="https://embed.spotify.com/?uri=spotify:track:2Xdc6qyaFBJZ8QW1KhpVci" width="250" height="330" frameborder="0" allowtransparency="true"></iframe>
-							<iframe src="https://embed.spotify.com/?uri=spotify:track:6nnjEqZuTa8cd5m35e1o0R" width="250" height="330" frameborder="0" allowtransparency="true"></iframe>
-						</p>
+						<div class='songblock'>
+							<span class='song' id='soul-kitchen-doors'></span>
+							<span class='song' id='soul-kitchen-x'></span>
+						</div>
 						<p class="small text">
 							The Doors (1967) covered by X (1980). The album with X's rendition was produced by Ray Manzarek, the Doors' keyboardist. 
 						</p>
@@ -159,9 +173,7 @@
 					</section>
 					<section>
 						<h3>This could be the Pistols</h3>
-						<p>
-							<iframe src="https://embed.spotify.com/?uri=spotify:track:1B6rqWbsidjU5eWxg3viXG" width="250" height="330" frameborder="0" allowtransparency="true"></iframe>
-						</p>
+						<div class='song' id='warsaw'></div>
 						<p class="text">
 							Joy Division were a band from Manchester formed in 1976 whose members drew inspiration from seeing the Sex Pistols live. 
 						</p>
@@ -171,27 +183,21 @@
 					</section>
 					<section>
 						<h3>This sounds different</h3>
-						<p>
-							<iframe src="https://embed.spotify.com/?uri=spotify:track:79CfK2gMGf0svanec6LJOj" width="250" height="330" frameborder="0" allowtransparency="true"></iframe>
-						</p>
+						<div class='song' id='shadowplay'></div>
 						<p class="text">
 							This is from their debut album, <i>Unknown Pleasures</i> (1979). It still has the same sort of instrumentation but is less harsh and more atmospheric. The song structure does not feature the usual verse, chorus, verse. 
 						</p>
 					</section>
 					<section>
 						<h3>More electronics</h3>
-						<p>
-							<iframe src="https://embed.spotify.com/?uri=spotify:track:6aydUK6llaiRoKQyQTDNPY" width="250" height="330" frameborder="0" allowtransparency="true"></iframe>
-						</p>
+						<div class='song' id='temptation'></div>
 						<p class="text">
 							Joy Division's singer, Ian Curtis, killed himself in 1980, and the rest of the band recast itself as New Order. This is an early song that shows the more synthesized, electronic direction that they would take. 
 						</p>
 					</section>
 					<section>
 						<h3>By now we're dancing</h3>
-						<p>
-							<iframe src="https://embed.spotify.com/?uri=spotify:track:6gv02BqPCsOQz5QQ4jnNOY" width="250" height="330" frameborder="0" allowtransparency="true"></iframe>
-						</p>
+						<div class='song' id='blue-monday'></div>
 						<p class="text">
 							In 1983 New Order scored a massive hit with this song. 
 						</p>
@@ -207,9 +213,7 @@
 					</section>
 					<section>
 						<h3>Modern influence</h3>
-						<p>
-							<iframe src="https://embed.spotify.com/?uri=spotify:track:1jJci4qxiYcOHhQR247rEU" width="250" height="330" frameborder="0" allowtransparency="true"></iframe>
-						</p>
+						<div class='song' id='kids'></div>
 						<p class="text">
 							Here's an example of a modern song that prominently wears its influence from this branch of music. 
 						</p>
@@ -230,11 +234,11 @@
 					</section>
 					<section>
 						<h3>Post-punk</h3>
-						<p>
-							<iframe src="https://embed.spotify.com/?uri=spotify:track:6z5KJH8tgGvPFOqoSScPgS" width="250" height="330" frameborder="0" allowtransparency="true"></iframe>
-							<iframe src="https://embed.spotify.com/?uri=spotify:track:1icyef1nNmLusODA03FLGf" width="250" height="330" frameborder="0" allowtransparency="true"></iframe>
-							<iframe src="https://embed.spotify.com/?uri=spotify:track:2tHCRnraE3HBGewTsaxhgh" width="250" height="330" frameborder="0" allowtransparency="true"></iframe>
-						</p>
+						<div class='songblock'>
+							<span class='song' id='where-is-my-mind'></span>
+							<span class='song' id='pink-turns-to-blue'></span>
+							<span class='song' id='teen-age-riot'></span>
+						</div>
 						<p class="text">
 							In the 1980s American "post-punk" bands kept the distorted electric guitar sound but slowed things down, got more melodious, wrote more elaborate song structures, and emphasized artistry over attitude and politics. 
 						</p>
@@ -244,9 +248,7 @@
 					</section>
 					<section>
 						<h3>Nirvana</h3>
-						<p>
-							<iframe src="https://embed.spotify.com/?uri=spotify:track:75aLTVBSGIquqzQ6AkmK3Q" width="250" height="330" frameborder="0" allowtransparency="true"></iframe>
-						</p>
+						<div class='song' id='smells-like-teen-spirit'></div>
 						<p class="text">
 							In the late 1980s and early 1990s, this genre burst into widespread prominence, spearheaded by Nirvana and the Seattle scene from which they came. 
 						</p>
@@ -256,15 +258,19 @@
 						<p>
 							<div style="width: 47.5%; float: left; text-align: right; clear: none;">
 								<div style="font-weight: bold; margin-bottom: 0.5em;">Earlier/independent</div>
-								<iframe src="https://embed.spotify.com/?uri=spotify:track:4HItkIfvl7S8J2euDhoDXr" width="250" height="80" frameborder="0" allowtransparency="true"></iframe>
-								<iframe src="https://embed.spotify.com/?uri=spotify:track:1S9NZjGx3O2BYyaLMnO9ut" width="250" height="80" frameborder="0" allowtransparency="true"></iframe>
-								<iframe src="https://embed.spotify.com/?uri=spotify:track:1MW7XOHGbdBQrVM2L88VH4" width="250" height="80" frameborder="0" allowtransparency="true"></iframe>
+								<div class='songblock'>
+									<span class='small-song' id='freak-scene'></span>
+									<span class='small-song' id='chesterfield-king'></span>
+									<span class='small-song' id='another-state-of-mind'></span>
+								</div>
 							</div>
 							<div style="width: 47.5%; float: right; text-align: left; clear: none;">
 								<div style="font-weight: bold; margin-bottom: 0.5em;">Later/major label</div>
-								<iframe src="https://embed.spotify.com/?uri=spotify:track:3NLUIBHlfnMVk81BgxFr42" width="250" height="80" frameborder="0" allowtransparency="true"></iframe>
-								<iframe src="https://embed.spotify.com/?uri=spotify:track:2gkTMvu0sq40EvgF3v9dpQ" width="250" height="80" frameborder="0" allowtransparency="true"></iframe>
-								<iframe src="https://embed.spotify.com/?uri=spotify:track:4CsTkNvkwQLel6sxQqrXSj" width="250" height="80" frameborder="0" allowtransparency="true"></iframe>
+								<div class='songblock'>
+									<span class='small-song' id='feel-the-pain'></span>
+									<span class='small-song' id='chemistry'></span>
+									<span class='small-song' id='ball-and-chain'></span>
+								</div>
 							</div>
 						</p>
 						<p class="text">
@@ -295,9 +301,7 @@
 					</section>
 					<section>
 						<h3>"...But everyone who [did] started a band"</h3>
-						<p>
-							<iframe src="https://embed.spotify.com/?uri=spotify:track:7xsvZuhTQEGsLfopzFjMsS" width="250" height="330" frameborder="0" allowtransparency="true"></iframe>
-						</p>
+						<div class='song' id='heroin'></div>
 						<p class="text">
 							The Velvet Underground is considered a major forerunner of punk, even though they don't sound much like the late 1970s punk bands. 
 						</p>
@@ -307,9 +311,7 @@
 					</section>
 					<section>
 						<h3>Quieter stuff</h3>
-						<p>
-							<iframe src="https://embed.spotify.com/?uri=spotify:track:2WOMnoM9wKlASLNOGxRk5D" width="250" height="330" frameborder="0" allowtransparency="true"></iframe>
-						</p>
+						<div class='song' id='down-at-the-sea'></div>
 						<p class="text">
 							A lot of bands who liked punk music retained the ethos and the emotion but adopted a lighter, "poppier" sound. 
 						</p>
@@ -319,9 +321,7 @@
 					</section>
 					<section>
 						<h3>Riot grrl</h3>
-						<p>
-							<iframe src="https://embed.spotify.com/?uri=spotify:track:4QIPqSI6VQ7WB7PIdyTYuv" width="250" height="330" frameborder="0" allowtransparency="true"></iframe>
-						</p>
+						<div class='song' id='good-things'></div>
 						<p class="text">
 							In the early 1990s many feminist-minded women took to punk to empower themselves and give voice to women's issues and perspectives. 
 						</p>
@@ -331,9 +331,7 @@
 					</section>
 					<section>
 						<h3>Noise</h3>
-						<p>
-							<iframe src="https://embed.spotify.com/?uri=spotify:track:70Zgcd8LaLHRR2ZSOcRjXL" width="250" height="330" frameborder="0" allowtransparency="true"></iframe>
-						</p>
+						<div class='song' id='assassins'></div>
 						<p class="text">
 							Many people feel that you aren't really "punk" if you aren't exploring new sounds and pushing the boundaries of music. 
 						</p>
@@ -344,17 +342,16 @@
 					</section>
 					<section>
 						<h3>The mainstream</h3>
-						<p>
-							<iframe src="https://embed.spotify.com/?uri=spotify:track:7yCPwWs66K8Ba5lFuU2bcx" width="250" height="330" frameborder="0" allowtransparency="true"></iframe>
-							<iframe src="https://embed.spotify.com/?uri=spotify:track:5lDriBxJd22IhOH9zTcFrV" width="250" height="330" frameborder="0" allowtransparency="true"></iframe>
-							<iframe src="https://embed.spotify.com/?uri=spotify:track:7s0lDK7y3XLmI7tcsRAbW0" width="250" height="330" frameborder="0" allowtransparency="true"></iframe>
-						</p>
+						<div class='songblock'>
+							<span class='song' id='all-the-small-things'></span>
+							<span class='song' id='dirty-little-secret'></span>
+							<span class='song' id='my-songs-know-what-you-did-in-the-dark'></span>
+						</div>
 						<p class="text">
 							The other side: some people consider mainstream pop-punk songs to be so far removed from the ideas of punk as not to merit the label. 
 						</p>
 						<p class="small text">
-							I personally enjoy pop songs as well and don't take a hard line on these definitions.<br/>
-							But some people do. 
+							I like plenty of pop music, punk-influenced and not. I don't care to debate whether something is "punk" or not. But some people do. 
 						</p>
 					</section>
 					<section>
@@ -371,7 +368,7 @@
 					<section>
 						<h2>The end</h2>
 						<p class="text">
-							These five lessons only covered a small fraction of punk music. I hope they've inspired you to go listen to and learn about the rest!
+							These five lessons only covered a small fraction of punk music in a really simplified way. I hope they've inspired you to go listen to and learn about the rest!
 						</p>
 					</section>
 					<section>
@@ -387,9 +384,7 @@
 						</p>
 					</section>
 					<section>
-						<p>
-							<iframe src="https://embed.spotify.com/?uri=spotify:track:2hmyNVIJReznYP3hOG6ZB7" width="250" height="330" frameborder="0" allowtransparency="true"></iframe>
-						</p>
+						<div class='song' id='part-time-punks'></div>
 					</section>
 				</section>
 
